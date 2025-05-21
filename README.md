@@ -108,7 +108,7 @@ segment them into:
 ## 👤 Author
 
 **Korrapati Jaswanth**  
-Data Science Enthusiast | Top Machine Learning & Data Analysis Voice on LinkedIn  
+Data Science Enthusiast | 23K Followers @Linkedln | Top Machine Learning & Data Analysis Voice on LinkedIn  
 📍 Bangalore, India  
 📧 Reach out via LinkedIn: [https://www.linkedin.com/in/jaswanth49b057228/]
 
