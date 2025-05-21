@@ -16,7 +16,7 @@ The dataset used is a retail transactional dataset containing the following colu
 - Sales, Quantity, Profit
 - Shipping Cost
 - Ship Mode
-- Region, State, City, Postal Code
+- Region, State, City
 
 ---
 
@@ -45,40 +45,54 @@ To perform **Customer Segmentation Analysis** and generate **actionable insights
 ## 🔍 Business Questions Solved
 
 ###  Beginner Level
-1. What is the total sales by segment?
-2. What is the average shipping cost by ship mode?
-3. What is the total quantity sold per segment?
-4. Which product categories are the most profitable?
-5. Which customers placed the most orders?
-
-###  Intermediate Level
-6. What is the monthly sales trend?
-7. What is the profit trend by category (MoM)?
-8. What is the total sales and profit for each category and sub-category?
-9. Identify customers who haven't placed an order in the last 6 months (Churn Detection).
-10. Classify orders as "High Profit", "Low Profit", or "Loss" using `CASE WHEN`.
-
-###  Advanced Level
-11. Monthly Profit Contribution by Customer Segment using `SUM()` with `PARTITION BY`
-12. Rank top-selling products within each category using `RANK() OVER()`
-13. Calculate MoM change in profit per category using `LAG()`
-14. Identify top 5 profitable cities in each region
-15. Track customer lifetime value by aggregating total sales per customer
+1. How many unique customers are in the dataset?
+2. What are the total sales and total profit across all orders?
+3. How many orders are placed under each customer segment?
+4. Which are the top 5 cities with the most customers?
+5. What is the total quantity sold per segment?
+6. How many orders were shipped under each shipping mode?
+7. What is the average discount given to customers in each segment?
+8. What are the most frequently purchased sub-categories?
+9. What is the monthly sales trend?
+10. Which product categories are the most profitable?
+11. What is the average shipping cost by ship mode?
+12. What is the total sales and profit for each combination of category and sub-category?
+13. Which customers have placed the most orders?
+14. Calculate the number of days taken to ship each order using DATEDIFF() 
+between Order_Date and Ship_Date. Identify orders that took more than 7 days. 
+Return order ID, customer name, shipping days, and a status ("Delayed" or "On Time").
+15. Write a query to classify each customer based on the number of orders they’ve placed. 
+segment them into:
+ - "One-Time Buyer" (1 order),
+ - "Occasional Buyer" (2–5 orders),
+ - "Frequent Buyer" (6–10 orders),
+ - "Loyal Customer" (more than 10 orders).
+16. Top 3 Most Profitable Products per Category
+17. Customer Sales Ranking by Region
+18. Customer Churn Detection
+19. Monthly Profit Contribution by Customer Segment
+20. What is the monthly profit trend?
+21. Determine the year-wise total sales and identify which year had the highest overall sales.
+22. What are the total sales for each quarter in every year?
 
 ---
 
-## 📈 Sample Insight
+## 📌 Simple Business Insights
 
-> "The **Consumer segment** accounts for the highest total sales and order quantity, but the **Corporate segment** shows higher average profit per order. This indicates potential to upsell more in the Corporate segment."
+-  Active Customers: **1416**
+-  Churned Customers: **174**
+-  Most Profitable Category: **Technology**
+-  Segment with Highest Sales: **Consumer**
+-  High Shipping Costs can negatively impact profits in some categories.
+-  Peak sales observed in **Q4 across multiple years**.
 
 ---
 
 ## 🛠 Tools Used
 
 - **MS SQL Server**
-- **SQL Server Management Studio (SSMS)**
 - Excel (for initial data exploration)
-- GitHub (for version control and publishing)
+- GitHub (for publishing)
 
 ---
 
