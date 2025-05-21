@@ -20,7 +20,7 @@ The dataset used is a retail transactional dataset containing the following colu
 
 ---
 
-## 🎯 Project Objective
+## Project Objective
 
 To perform **Customer Segmentation Analysis** and generate **actionable insights** that help understand:
 - Sales and profit trends
@@ -31,7 +31,7 @@ To perform **Customer Segmentation Analysis** and generate **actionable insights
 
 ---
 
-## 🧠 Key SQL Concepts Used
+##  Key SQL Concepts Used
 
 - `CTE` (Common Table Expressions)
 - `CASE WHEN` statements
@@ -42,7 +42,7 @@ To perform **Customer Segmentation Analysis** and generate **actionable insights
 
 ---
 
-## 🔍 Business Questions Solved
+##  Business Questions Solved
 
 1. How many unique customers are in the dataset?
 2. What are the total sales and total profit across all orders?
@@ -76,7 +76,7 @@ segment them into:
 
 ---
 
-## 📌 Simple Business Insights
+##  Simple Business Insights
 
 -  Active Customers: **1416**
 -  Churned Customers: **174**
@@ -87,7 +87,7 @@ segment them into:
 
 ---
 
-## 🛠 Tools Used
+##  Tools Used
 
 - **MS SQL Server**
 - Excel (for initial data exploration)
@@ -95,7 +95,7 @@ segment them into:
 
 ---
 
-## 🚀 How to Use
+##  How to Use
 
 1. Clone this repository:
    
@@ -104,14 +104,14 @@ segment them into:
 
 ---
 
-## 👤 Author
+##  Author
 
 **Korrapati Jaswanth**  
 Data Science Enthusiast | 23K Followers @Linkedln | Top Machine Learning & Data Analysis Voice on LinkedIn  
-📍 Bangalore, India  
-📧 Reach out via LinkedIn: [https://www.linkedin.com/in/jaswanth49b057228/]
+Bangalore, India  
+Reach out via LinkedIn: [https://www.linkedin.com/in/jaswanth49b057228/]
 
 ---
 
-## ⭐️ Don't forget to star this repository if you found it helpful!
+## Don't forget to star this repository if you found it helpful!
 
