@@ -44,7 +44,6 @@ To perform **Customer Segmentation Analysis** and generate **actionable insights
 
 ## 🔍 Business Questions Solved
 
-###  Beginner Level
 1. How many unique customers are in the dataset?
 2. What are the total sales and total profit across all orders?
 3. How many orders are placed under each customer segment?
