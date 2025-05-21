@@ -96,7 +96,7 @@ To perform **Customer Segmentation Analysis** and generate **actionable insights
 **Korrapati Jaswanth**  
 Data Science Enthusiast | Top Machine Learning & Data Analysis Voice on LinkedIn  
 📍 Bangalore, India  
-📧 Reach out via LinkedIn: [linkedin.com/in/korrapati-jaswanth](https://linkedin.com/in/korrapati-jaswanth)
+📧 Reach out via LinkedIn: [https://www.linkedin.com/in/jaswanth49b057228/]
 
 ---
 
