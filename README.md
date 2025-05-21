@@ -85,3 +85,20 @@ To perform **Customer Segmentation Analysis** and generate **actionable insights
 ## 🚀 How to Use
 
 1. Clone this repository:
+   
+2. Open the `.sql` files in **SSMS** or any SQL IDE.
+3. Run the queries against your SQL Server after importing the dataset.
+
+---
+
+## 👤 Author
+
+**Korrapati Jaswanth**  
+Data Science Enthusiast | Top Machine Learning & Data Analysis Voice on LinkedIn  
+📍 Bangalore, India  
+📧 Reach out via LinkedIn: [linkedin.com/in/korrapati-jaswanth](https://linkedin.com/in/korrapati-jaswanth)
+
+---
+
+## ⭐️ Don't forget to star this repository if you found it helpful!
+
