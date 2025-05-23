@@ -82,7 +82,11 @@ SELECT segment, SUM(Quantity) AS Total_Quantity_Sold
 FROM Customer_Segmentation
 GROUP BY Segment;
 
-
+-- Total Profit per segment.
+SELECT segment, SUM(profit) AS Total_Profit 
+FROM Customer_Segmentation
+GROUP BY Segment
+ORDER BY Total_Profit DESC;
 ----------------------------------------------------------------------------------
 
 --- 6) How many orders were shipped under each shipping mode?
@@ -206,11 +210,11 @@ FROM cte;
 
 /* 15) Customer Purchase Frequency Classification
 
-Write a query to classify each customer based on the number of orders they’ve placed. 
+Write a query to classify each customer based on the number of orders theyâ€™ve placed. 
 segment them into:
  - "One-Time Buyer" (1 order),
- - "Occasional Buyer" (2–5 orders),
- - "Frequent Buyer" (6–10 orders),
+ - "Occasional Buyer" (2â€“5 orders),
+ - "Frequent Buyer" (6â€“10 orders),
  - "Loyal Customer" (more than 10 orders).
 */
 
@@ -381,11 +385,24 @@ ORDER BY Sales_Year DESC;
 ------------------------------------------------------------------------------
 
 -- 24) What are the total sales for each quarter in every year?
+WITH cte AS (
 SELECT DATEPART(YEAR, Order_Date) AS Sales_Year, DATEPART(QUARTER, Order_Date) AS Sales_Quarter,
 CAST(SUM(Sales) AS DECIMAL(10,2)) AS Total_Sales 
 FROM Customer_Segmentation 
-GROUP BY DATEPART(YEAR, Order_Date), DATEPART(QUARTER, Order_Date)
-ORDER BY Sales_Year, Sales_Quarter;
+GROUP BY DATEPART(YEAR, Order_Date), DATEPART(QUARTER, Order_Date) ),
+
+cte_2 AS (
+SELECT Sales_Year, Sales_Quarter, Total_Sales AS Current_Quarter_Sales,
+LAG(Total_Sales) OVER(PARTITION BY Sales_Year ORDER BY Sales_Quarter) AS Previous_Quarter_Sales
+FROM cte)
+
+SELECT Sales_Year, Sales_Quarter, Current_Quarter_Sales,Previous_Quarter_Sales,
+(Current_Quarter_Sales - Previous_Quarter_Sales) AS Sales_Diff,
+CASE WHEN Previous_Quarter_Sales IS NULL THEN 0 
+ELSE 
+CAST((Current_Quarter_Sales - Previous_Quarter_Sales)*100/Current_Quarter_Sales AS DECIMAL(10,2))
+                                                     END AS PercentageChange 
+FROM cte_2;
 
 ---------------------------------------------------------------------------
 
@@ -411,7 +428,7 @@ ORDER BY Sales_Year, Sales_Quarter;
 
 6) Churn Analysis
   - 1,416 customers are Active (placed an order within the last 6 months),
-  - 174 customers are Churned (haven’t placed an order in the last 6 months).
+  - 174 customers are Churned (havenâ€™t placed an order in the last 6 months).
   - This indicates that approximately 89% of customers are retained, while around 11% 
   are at risk of churn.
   - These churned customers can be targeted with re-engagement strategies or offers.
